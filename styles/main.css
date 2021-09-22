@@ -1,3 +1,103 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap");
-@import url(./__variables.scss);
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 55% 45%;
+      grid-template-columns: 55% 45%;
+}
+
+header #carouselExampleControls .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  z-index: 1;
+  padding: 5%;
+  position: absolute;
+}
+
+header #carouselExampleControls .nav .logo {
+  padding: 0;
+  margin: 0;
+}
+
+header #carouselExampleControls .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+header #carouselExampleControls .nav li {
+  padding: 0 2em;
+}
+
+header #carouselExampleControls .nav li a {
+  color: white;
+  font-family: Spartan;
+  text-decoration: none;
+}
+
+header #carouselExampleControls .carousel-inner {
+  width: 100%;
+  background-color: #777;
+}
+
+header #header-details {
+  background-color: #e0e0e0;
+}
+
+header #header-details #wrapper {
+  padding: 8em;
+}
+
+header #header-details #carousel-arrows .left {
+  position: absolute;
+  background-color: black;
+  border: none;
+  width: 75px;
+  height: 75px;
+}
+
+header #header-details #carousel-arrows .left .carousel-control-prev-icon {
+  background-image: url(/images/icon-angle-left.svg);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  width: 25px;
+}
+
+header #header-details #carousel-arrows .right {
+  position: absolute;
+  background-color: black;
+  border: none;
+  width: 75px;
+  height: 75px;
+  margin: 0 0 0 4em;
+}
+
+header #header-details #carousel-arrows .right .carousel-control-next-icon {
+  background-image: url(/images/icon-angle-right.svg);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  width: 25px;
+}
 /*# sourceMappingURL=main.css.map */

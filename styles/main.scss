@@ -1,2 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
-@import url(./__variables.scss);
+@import "./_variables";
+
+body {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 55% 45%;
+
+    #carouselExampleControls{
+    
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            z-index: 1;
+            padding:5%;
+            position: absolute;
+
+            .logo {
+                padding: 0;
+                margin: 0;
+            }
+
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+            }
+
+            li {
+                padding: 0 2em;
+
+                a {
+                    color:$white;
+                    font-family: $fontFamily;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .carousel-inner {
+            width:100%;
+            background-color: #777;
+        }
+    }
+
+    #header-details {
+        background-color: rgb(224, 224, 224);
+
+        #wrapper {
+            padding:8em;
+        }
+
+
+        #carousel-arrows {
+            
+
+            .left {
+                position: absolute;
+                background-color: black;
+                border: none;
+                width:75px;
+                height:75px;
+            
+                .carousel-control-prev-icon {
+                    background-image: url(/images/icon-angle-left.svg);
+                    transform: scale(0.5);
+                    width:25px;
+                }
+            }
+            .right {
+                position: absolute;
+                background-color: black;
+                border: none;
+                width:75px;
+                height:75px;
+                margin:0 0 0 4em;
+            
+                .carousel-control-next-icon {
+                    background-image: url(/images/icon-angle-right.svg);
+                    transform: scale(0.5);
+                    width:25px;
+                }
+            }
+        }    
+    }
+}
+
