@@ -62,14 +62,14 @@ header {
 
         #carousel-arrows {
         position: absolute;
-        bottom:75px;
+        bottom:100px;
     
             .left {
                 position: absolute;
                 background-color: black;
                 border: none;
-                width:75px;
-                height:75px;
+                width:100px;
+                height:100px;
             
                 .carousel-control-prev-icon {
                     background-image: url(/images/icon-angle-left.svg);
@@ -81,8 +81,8 @@ header {
                 position: absolute;
                 background-color: black;
                 border: none;
-                width:75px;
-                height:75px;
+                width:100px;
+                height:100px;
                 margin:0 0 0 4em;
             
                 .carousel-control-next-icon {
@@ -92,6 +92,27 @@ header {
                 }
             }
         }    
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.45fr;
+
+    .imageOne {
+        background-image: url(/images/image-about-dark.jpg);
+
+    }
+
+    
+    .about {
+        background-color: white;
+    }
+
+    .imageTwo {
+        background-image: url(/images/image-about-light.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 

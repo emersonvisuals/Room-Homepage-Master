@@ -73,15 +73,15 @@ header #header-details #wrapper {
 
 header #header-details #carousel-arrows {
   position: absolute;
-  bottom: 75px;
+  bottom: 100px;
 }
 
 header #header-details #carousel-arrows .left {
   position: absolute;
   background-color: black;
   border: none;
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
 }
 
 header #header-details #carousel-arrows .left .carousel-control-prev-icon {
@@ -95,8 +95,8 @@ header #header-details #carousel-arrows .right {
   position: absolute;
   background-color: black;
   border: none;
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   margin: 0 0 0 4em;
 }
 
@@ -105,5 +105,26 @@ header #header-details #carousel-arrows .right .carousel-control-next-icon {
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
   width: 25px;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5fr 1.45fr;
+      grid-template-columns: 1fr 1.5fr 1.45fr;
+}
+
+main .imageOne {
+  background-image: url(/images/image-about-dark.jpg);
+}
+
+main .about {
+  background-color: white;
+}
+
+main .imageTwo {
+  background-image: url(/images/image-about-light.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /*# sourceMappingURL=main.css.map */
