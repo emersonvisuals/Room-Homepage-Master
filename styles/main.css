@@ -63,11 +63,17 @@ header #carouselExampleControls .carousel-inner {
 }
 
 header #header-details {
-  background-color: #e0e0e0;
+  background-color: #f7f7f7;
+  position: relative;
 }
 
 header #header-details #wrapper {
   padding: 8em;
+}
+
+header #header-details #carousel-arrows {
+  position: absolute;
+  bottom: 75px;
 }
 
 header #header-details #carousel-arrows .left {
