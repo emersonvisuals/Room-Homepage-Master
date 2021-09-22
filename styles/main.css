@@ -4,16 +4,19 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 55% 45%;
-      grid-template-columns: 55% 45%;
+  -ms-grid-columns: (1fr)[100];
+      grid-template-columns: repeat(100, 1fr);
 }
 
-header #carouselExampleControls .nav {
+#carouselExampleControls {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 60;
+}
+
+#carouselExampleControls .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,12 +31,12 @@ header #carouselExampleControls .nav {
   position: absolute;
 }
 
-header #carouselExampleControls .nav .logo {
+#carouselExampleControls .nav .logo {
   padding: 0;
   margin: 0;
 }
 
-header #carouselExampleControls .nav ul {
+#carouselExampleControls .nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,36 +50,94 @@ header #carouselExampleControls .nav ul {
   margin: 0;
 }
 
-header #carouselExampleControls .nav li {
+#carouselExampleControls .nav li {
   padding: 0 2em;
 }
 
-header #carouselExampleControls .nav li a {
+#carouselExampleControls .nav li a {
   color: white;
   font-family: Spartan;
   text-decoration: none;
 }
 
-header #carouselExampleControls .carousel-inner {
-  width: 100%;
-  background-color: #777;
+#carouselExampleControls .carousel-item {
+  height: 70vh;
 }
 
-header #header-details {
+#carouselExampleControls .heroOne {
+  background-image: url(/images/desktop-image-hero-1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+}
+
+#carouselExampleControls .heroTwo {
+  background-image: url(/images/desktop-image-hero-2.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+}
+
+#carouselExampleControls .heroThree {
+  background-image: url(/images/desktop-image-hero-3.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+}
+
+#header-details {
+  -ms-grid-column: 60;
+      grid-column-start: 60;
+  grid-column-end: 110;
   background-color: #f7f7f7;
   position: relative;
+  height: 70vh;
+  padding: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-header #header-details #wrapper {
-  padding: 8em;
+#header-details h1 {
+  font-family: Spartan;
+  font-weight: 800;
+  margin: 1em 0 0.75em 0;
 }
 
-header #header-details #carousel-arrows {
+#header-details p {
+  color: #a1a1a1;
+}
+
+#header-details button.shop-now {
+  background-color: transparent;
+  border: transparent;
+  text-transform: uppercase;
+  font-family: Spartan;
+  padding: 1em 0.75em 0 0;
+  letter-spacing: 0.5em;
+  font-weight: 600;
+}
+
+#header-details button.shop-now::after {
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 20px;
+  background-image: url(/images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  margin: 0.25em 0 0 1em;
+}
+
+#header-details .carousel-arrows {
   position: absolute;
   bottom: 100px;
+  left: 0;
 }
 
-header #header-details #carousel-arrows .left {
+#header-details .carousel-arrows .left {
   position: absolute;
   background-color: black;
   border: none;
@@ -84,14 +145,14 @@ header #header-details #carousel-arrows .left {
   height: 100px;
 }
 
-header #header-details #carousel-arrows .left .carousel-control-prev-icon {
+#header-details .carousel-arrows .left .carousel-control-prev-icon {
   background-image: url(/images/icon-angle-left.svg);
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
   width: 25px;
 }
 
-header #header-details #carousel-arrows .right {
+#header-details .carousel-arrows .right {
   position: absolute;
   background-color: black;
   border: none;
@@ -100,31 +161,56 @@ header #header-details #carousel-arrows .right {
   margin: 0 0 0 4em;
 }
 
-header #header-details #carousel-arrows .right .carousel-control-next-icon {
+#header-details .carousel-arrows .right .carousel-control-next-icon {
   background-image: url(/images/icon-angle-right.svg);
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
   width: 25px;
 }
 
-main {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1.5fr 1.45fr;
-      grid-template-columns: 1fr 1.5fr 1.45fr;
-}
-
-main .imageOne {
+#imageOne {
+  content: '';
+  width: auto;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 30;
   background-image: url(/images/image-about-dark.jpg);
-}
-
-main .about {
-  background-color: white;
-}
-
-main .imageTwo {
-  background-image: url(/images/image-about-light.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#about {
+  content: '';
+  padding: 10%;
+  background-color: white;
+  -ms-grid-column: 30;
+      grid-column-start: 30;
+  grid-column-end: 70;
+}
+
+#about h2 {
+  text-transform: uppercase;
+  font-family: Spartan;
+  font-size: 1em;
+  letter-spacing: 0.25em;
+  font-weight: 700;
+}
+
+#about p {
+  margin: 2em 0 0 0;
+  font-size: 15px;
+  font-family: Spartan;
+  font-weight: lighter;
+  color: #a1a1a1;
+}
+
+#imageTwo {
+  content: '';
+  -ms-grid-column: 70;
+      grid-column-start: 70;
+  grid-column-end: 110;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/images/image-about-light.jpg);
 }
 /*# sourceMappingURL=main.css.map */
