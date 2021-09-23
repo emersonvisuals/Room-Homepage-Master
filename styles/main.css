@@ -27,7 +27,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   z-index: 1;
-  padding: 5%;
+  padding: 8%;
   position: absolute;
 }
 
@@ -121,6 +121,10 @@ body {
   padding: 1em 0.75em 0 0;
   letter-spacing: 0.5em;
   font-weight: 600;
+  -webkit-animation: shopNow 3s infinite;
+          animation: shopNow 3s infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 #header-details button.shop-now::after {
@@ -131,6 +135,40 @@ body {
   background-image: url(/images/icon-arrow.svg);
   background-repeat: no-repeat;
   margin: 0.25em 0 0 1em;
+  -webkit-animation: shopNow 3s infinite;
+          animation: shopNow 3s infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes shopNow {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes shopNow {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 #header-details .carousel-arrows {
@@ -154,13 +192,19 @@ body {
   width: 25px;
 }
 
+#header-details .carousel-arrows .left:hover {
+  background-color: #424242;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
 #header-details .carousel-arrows .right {
   position: absolute;
   background-color: black;
   border: none;
   width: 105px;
   height: 105px;
-  margin: 0 0 0 4em;
+  margin: 0 0 0 6.5em;
 }
 
 #header-details .carousel-arrows .right .carousel-control-next-icon {
@@ -168,6 +212,12 @@ body {
   -webkit-transform: scale(0.75);
           transform: scale(0.75);
   width: 25px;
+}
+
+#header-details .carousel-arrows .right:hover {
+  background-color: #424242;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
 }
 
 #imageOne {

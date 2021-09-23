@@ -19,7 +19,7 @@ body {
         justify-content: center;
         align-items: flex-start;
         z-index: 1;
-        padding:5%;
+        padding:8%;
         position: absolute;
 
         .logo {
@@ -102,6 +102,9 @@ body {
         padding: 1em 0.75em 0 0;
         letter-spacing: 0.5em;
         font-weight: 600;
+        animation: shopNow 3s infinite;
+        animation-timing-function: ease-in-out;
+
     }
 
     button.shop-now::after{
@@ -112,6 +115,20 @@ body {
         background-image: url(/images/icon-arrow.svg);
         background-repeat: no-repeat;
         margin: 0.25em 0 0 1em;
+        animation: shopNow 3s infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes shopNow {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 
 
@@ -134,19 +151,30 @@ body {
                 width:25px;
             }
         }
+
+        .left:hover {
+            background-color:rgb(66, 66, 66);
+            transition: 0.2s all;
+        }
+
         .right {
             position: absolute;
             background-color: black;
             border: none;
             width:105px;
             height:105px;
-            margin:0 0 0 4em;
+            margin:0 0 0 6.5em;
         
             .carousel-control-next-icon {
                 background-image: url(/images/icon-angle-right.svg);
                 transform: scale(0.75);
                 width:25px;
             }
+        }
+        
+        .right:hover {
+            background-color:rgb(66, 66, 66);
+            transition: 0.2s all;
         }
     }    
 }
