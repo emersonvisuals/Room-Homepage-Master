@@ -401,7 +401,7 @@ body {
     left: 10%;
     bottom: -25%;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
   }
   #carouselExampleControls .nav #toggle {
     content: '';
@@ -413,7 +413,7 @@ body {
     bottom: 0%;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
-    z-index: 1;
+    z-index: 2;
   }
   #carouselExampleControls .nav #toggle::after {
     content: '';
@@ -424,7 +424,7 @@ body {
     margin: 10px 0 0 0;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
-    z-index: 1;
+    z-index: 2;
   }
   #carouselExampleControls .nav #toggle::before {
     content: '';
@@ -435,13 +435,13 @@ body {
     margin: -10px 0 0 0;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
-    z-index: 1;
+    z-index: 2;
   }
   #carouselExampleControls .nav #toggle.active {
     width: 0px;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
-    z-index: 1;
+    z-index: 2;
   }
   #carouselExampleControls .nav #toggle.active::before {
     -webkit-transform: translateY(10px) rotate(45deg);
@@ -449,7 +449,7 @@ body {
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
     background-color: #a1a1a1;
-    z-index: 1;
+    z-index: 2;
   }
   #carouselExampleControls .nav #toggle.active::after {
     -webkit-transform: translateY(-10px) rotate(-45deg);
@@ -457,7 +457,7 @@ body {
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
     background-color: #a1a1a1;
-    z-index: 1;
+    z-index: 2;
   }
   #carouselExampleControls .nav .logo {
     margin: 0;
@@ -484,14 +484,14 @@ body {
             transform: translateY(-125px);
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
-    z-index: 1;
+    z-index: 2;
   }
   #carouselExampleControls .nav ul.active {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
-    z-index: 1;
+    z-index: 2;
   }
   #carouselExampleControls .nav li {
     padding: 0 2%;
@@ -501,13 +501,6 @@ body {
     font-family: Spartan;
     text-decoration: none;
     text-align: center;
-  }
-  #carouselExampleControls .nav #backdropOne {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
   }
   #carouselExampleControls .carousel-item {
     height: 50vh;
@@ -533,6 +526,20 @@ body {
     width: auto;
     height: 50vh;
   }
+  #carouselExampleControls #backdropOne {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    top: 0;
+    z-index: 1;
+    overflow-y: hidden;
+  }
+  #carouselExampleControls #backdropOne.active {
+    opacity: 0.5;
+  }
   #header-details {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -549,6 +556,19 @@ body {
     padding: 10% 10% 0% 10%;
     display: flex;
     align-items: center;
+  }
+  #header-details #backdropTwo {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    top: 0;
+    overflow-y: hidden;
+  }
+  #header-details #backdropTwo.active {
+    opacity: 0.5;
   }
   #header-details h1 {
     font-family: Spartan;
