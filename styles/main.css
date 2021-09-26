@@ -8,6 +8,7 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[100];
       grid-template-columns: repeat(100, 1fr);
+  overflow-y: hidden;
 }
 
 #carouselExampleControls {
@@ -96,21 +97,79 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #header-details h1 {
   font-family: Spartan;
   font-weight: 800;
-  margin: 1em 0 0.75em 0;
+  margin: -2em 0 0.75em 0;
+  -webkit-animation: changeNormal 1s;
+          animation: changeNormal 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes changeNormal {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes changeNormal {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+#header-details h1.active {
+  -webkit-animation: changeActive 0.5s;
+          animation: changeActive 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes changeActive {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes changeActive {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 #header-details p {
   color: #a1a1a1;
   font-family: Spartan;
   font-size: 12px;
+  -webkit-animation: changeNormal 1s;
+          animation: changeNormal 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+#header-details p.active {
+  -webkit-animation: changeActive 1s;
+          animation: changeActive 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 #header-details button.shop-now {
@@ -277,5 +336,6 @@ body {
   background-size: cover;
   background-image: url(/images/image-about-light.jpg);
   z-index: 1;
+  height: 35vh;
 }
 /*# sourceMappingURL=main.css.map */

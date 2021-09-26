@@ -7,6 +7,7 @@ body {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(100, 1fr);
+    overflow-y: hidden;
 }
 
 
@@ -80,18 +81,51 @@ body {
     height: 65vh;
     padding:10%;
     display: flex;
-    justify-content: center;
+    align-items: center;
 
     h1 {
         font-family: $fontFamily;
         font-weight: 800;
-        margin:1em 0 0.75em 0;
+        margin:-2em 0 0.75em 0;
+        animation: changeNormal 1s;
+        animation-timing-function: ease-in-out; 
     }
+
+    @keyframes changeNormal {
+        0% {
+            opacity: 0%;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
+
+    h1.active {
+        animation: changeActive 0.5s;
+        animation-timing-function: ease-in-out; 
+    }
+
+    @keyframes changeActive {
+        0% {
+            opacity: 0%;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
+
 
     p {
         color:$darkGrey;
         font-family: $fontFamily;
         font-size: 12px;
+        animation: changeNormal 1s;
+        animation-timing-function: ease-in-out; 
+    }
+
+    p.active {
+        animation: changeActive 1s;
+        animation-timing-function: ease-in-out; 
     }
 
     button.shop-now{
@@ -229,5 +263,6 @@ body {
     background-size: cover;
     background-image: url(/images/image-about-light.jpg);
     z-index: 1;
+    height: 35vh;
 }
 
