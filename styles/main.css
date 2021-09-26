@@ -372,12 +372,17 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     z-index: 1;
-    padding: 5% 0 5% 5%;
-    position: absolute;
+    padding: 1em;
+    width: 100%;
+    margin: auto;
   }
   #carouselExampleControls .nav .logo {
     padding: 0;
@@ -395,14 +400,16 @@ body {
             align-items: center;
     list-style: none;
     margin: 0;
+    visibility: hidden;
   }
   #carouselExampleControls .nav li {
-    padding: 0 2em;
+    padding: 0 1em;
   }
   #carouselExampleControls .nav li a {
     color: white;
     font-family: Spartan;
     text-decoration: none;
+    text-align: center;
   }
   #carouselExampleControls .carousel-item {
     height: 65vh;
@@ -560,15 +567,16 @@ body {
   }
   #header-details .carousel-arrows {
     position: absolute;
-    bottom: 100px;
+    top: -90px;
     left: 0;
+    float: right;
   }
   #header-details .carousel-arrows .left {
     position: absolute;
     background-color: black;
     border: none;
-    width: 105px;
-    height: 105px;
+    width: 90px;
+    height: 90px;
   }
   #header-details .carousel-arrows .left .carousel-control-prev-icon {
     background-image: url(/images/icon-angle-left.svg);
@@ -585,9 +593,9 @@ body {
     position: absolute;
     background-color: black;
     border: none;
-    width: 105px;
-    height: 105px;
-    margin: 0 0 0 6.5em;
+    width: 90px;
+    height: 90px;
+    margin: 0 0 0 5.6em;
   }
   #header-details .carousel-arrows .right .carousel-control-next-icon {
     background-image: url(/images/icon-angle-right.svg);
