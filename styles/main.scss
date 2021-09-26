@@ -294,7 +294,7 @@ body {
             width: 100%;
             margin:0;
         
-            .toggle {
+            #toggle {
                 content:'';
                 width:30px;
                 height:3px;
@@ -302,25 +302,70 @@ body {
                 position:absolute;
                 left:10%;
                 bottom:55%;
+                transition: 0.5s all;
             }
 
-            .toggle::after {
+            #toggle::after {
                 content:'';
                 width:30px;
                 height:3px;
                 background-color: $white;
                 position: absolute;
                 margin: 10px 0 0 0;
+                transition: 0.5s all;
             }
 
-            .toggle::before {
+            #toggle::before {
                 content:'';
                 width:30px;
                 height:3px;
                 background-color: $white;
                 position: absolute;
                 margin: -10px 0 0 0;
+                transition: 0.5s all;
             }
+
+            #toggle.active{
+                width: 0px;
+                transition: 0.5s all;
+            }
+
+            #toggle.active::before {
+                transform:  translateY(10px) rotate(45deg);
+                transition: 0.5s all;
+                background-color: $darkGrey;
+            }
+
+            #toggle.active::after {
+                transform:  translateY(-10px) rotate(-45deg);
+                transition: 0.5s all;
+                background-color: $darkGrey;
+            }
+
+            #dropdown {
+                position: absolute;
+                content:'';
+                width: 100%;
+                top:0;
+                height: 100px;
+                background-color: $white;
+                transform: translateY(-100px);
+                transition: 0.5s all;
+            }
+
+            #dropdown.active {
+                position: absolute;
+                content:'';
+                width: 100%;
+                top:0;
+                height: 100px;
+                background-color: $white;
+                transform: translateY(0px);
+                transition: 0.5s all;
+            }
+
+
+
 
 
             .logo {

@@ -390,7 +390,7 @@ body {
     width: 100%;
     margin: 0;
   }
-  #carouselExampleControls .nav .toggle {
+  #carouselExampleControls .nav #toggle {
     content: '';
     width: 30px;
     height: 3px;
@@ -398,22 +398,71 @@ body {
     position: absolute;
     left: 10%;
     bottom: 55%;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
   }
-  #carouselExampleControls .nav .toggle::after {
+  #carouselExampleControls .nav #toggle::after {
     content: '';
     width: 30px;
     height: 3px;
     background-color: white;
     position: absolute;
     margin: 10px 0 0 0;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
   }
-  #carouselExampleControls .nav .toggle::before {
+  #carouselExampleControls .nav #toggle::before {
     content: '';
     width: 30px;
     height: 3px;
     background-color: white;
     position: absolute;
     margin: -10px 0 0 0;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+  #carouselExampleControls .nav #toggle.active {
+    width: 0px;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+  #carouselExampleControls .nav #toggle.active::before {
+    -webkit-transform: translateY(10px) rotate(45deg);
+            transform: translateY(10px) rotate(45deg);
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+    background-color: #a1a1a1;
+  }
+  #carouselExampleControls .nav #toggle.active::after {
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+            transform: translateY(-10px) rotate(-45deg);
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+    background-color: #a1a1a1;
+  }
+  #carouselExampleControls .nav #dropdown {
+    position: absolute;
+    content: '';
+    width: 100%;
+    top: 0;
+    height: 100px;
+    background-color: white;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+  #carouselExampleControls .nav #dropdown.active {
+    position: absolute;
+    content: '';
+    width: 100%;
+    top: 0;
+    height: 100px;
+    background-color: white;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
   }
   #carouselExampleControls .nav ul {
     display: -webkit-box;
