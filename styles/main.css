@@ -357,7 +357,21 @@ body {
     overflow-y: scroll;
   }
   body.lock {
-    overflow-y: hidden;
+    overflow: hidden;
+  }
+  #backdropBody {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 210%;
+    z-index: 1;
+    background-color: black;
+    opacity: 0;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #backdropBody.active {
+    opacity: 0.5;
   }
   #carouselExampleControls {
     display: -webkit-box;
@@ -526,20 +540,6 @@ body {
     width: auto;
     height: 50vh;
   }
-  #carouselExampleControls #backdropOne {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0;
-    top: 0;
-    z-index: 1;
-    overflow-y: hidden;
-  }
-  #carouselExampleControls #backdropOne.active {
-    opacity: 0.5;
-  }
   #header-details {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -556,19 +556,6 @@ body {
     padding: 10% 10% 0% 10%;
     display: flex;
     align-items: center;
-  }
-  #header-details #backdropTwo {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0;
-    top: 0;
-    overflow-y: hidden;
-  }
-  #header-details #backdropTwo.active {
-    opacity: 0.5;
   }
   #header-details h1 {
     font-family: Spartan;

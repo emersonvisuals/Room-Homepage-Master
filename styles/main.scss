@@ -11,6 +11,7 @@ body {
 }
 
 
+
 #carouselExampleControls{
     grid-column-start: 1;
     grid-column-end: 60;
@@ -280,7 +281,23 @@ body {
     }
 
     body.lock {
-        overflow-y: hidden;
+        overflow:hidden;
+    }
+
+    #backdropBody {
+        position: absolute;
+        content: '';
+        width:100%;
+        height:210%;
+        z-index: 1;
+        background-color: black;
+        opacity: 0;
+        z-index: 1;
+        overflow:hidden;
+    }
+
+    #backdropBody.active {
+        opacity: 0.5;
     }
 
 
@@ -434,22 +451,6 @@ body {
             height: 50vh;
         }
 
-        #backdropOne {
-            content:'';
-            position: absolute;
-            width:100%;
-            height:100%;
-            background-color: black;
-            opacity: 0;
-            top:0;
-            z-index: 1;
-            overflow-y: hidden;
-        }
-
-        #backdropOne.active{
-            opacity: 0.5;
-        }
-
     }
 
     #header-details {
@@ -462,21 +463,6 @@ body {
         padding:10% 10% 0% 10%;
         display: flex;
         align-items: center;
-
-        #backdropTwo {
-            content:'';
-            position: absolute;
-            width:100%;
-            height:100%;
-            background-color: black;
-            opacity: 0;
-            top:0;
-            overflow-y: hidden;
-        }
-
-        #backdropTwo.active{
-            opacity: 0.5;
-        }
 
         h1 {
             font-family: $fontFamily;

@@ -77,15 +77,13 @@ const toggle = document.querySelector('#toggle');
 const dropdown = document.querySelector('ul');
 const trigger = document.querySelector('#trigger');
 const body = document.body;
-const backdropOne = document.querySelector('#backdropOne');
-const backdropTwo = document.querySelector('#backdropTwo');
+const backdrop = document.querySelector('#backdropBody');
 
 
 trigger.addEventListener('click', function(){
     toggle.classList.toggle('active');
     dropdown.classList.toggle('active');
     body.classList.toggle('lock');
-    backdropOne.classList.toggle('active');
-    backdropTwo.classList.toggle('active');
+    backdrop.classList.toggle('active');
 
 });
