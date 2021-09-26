@@ -272,14 +272,15 @@ body {
         padding:0;
         margin:0;
         box-sizing: border-box;
-        display: grid;
+        display: flex;
+        flex-direction: column;
         grid-template-columns: repeat(100, 1fr);
         overflow-y: scroll;
     }
 
     #carouselExampleControls{
-        grid-column-start: 1;
-        grid-column-end: 100;
+        display: flex;
+        flex-direction: column;
     
         .nav {
             display: flex;
@@ -340,12 +341,12 @@ body {
     }
 
     #header-details {
-        grid-column-start: 1;
-        grid-column-end: 100;
+        display: flex;
+        flex-direction: column;
         background-color: rgb(247, 247, 247);
         position: relative;
         height: 65vh;
-        padding:10%;
+        padding:30% 10% 0% 10%;
         display: flex;
         align-items: center;
 
@@ -482,8 +483,8 @@ body {
 
     #imageOne {
         content: '';
-        grid-column-start: 1;
-        grid-column-end: 100;
+        display: flex;
+        flex-direction: column;
         background-image: url(/images/image-about-dark.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -523,8 +524,8 @@ body {
 
     #imageTwo {
         content: '';
-        grid-column-start: 1;
-        grid-column-end: 100;
+        display: flex;
+        flex-direction: column;
         background-repeat: no-repeat;
         background-size: cover;
         background-image: url(/images/image-about-light.jpg);
