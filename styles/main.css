@@ -369,9 +369,11 @@ body {
     opacity: 0;
     z-index: 1;
     overflow: hidden;
+    visibility: hidden;
   }
   #backdropBody.active {
     opacity: 0.5;
+    visibility: visible;
   }
   #carouselExampleControls {
     display: -webkit-box;
