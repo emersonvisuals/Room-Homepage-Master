@@ -74,11 +74,15 @@ left.addEventListener('click', function(){
 // mobile burger 
 
 const toggle = document.querySelector('#toggle');
-const dropdown = document.querySelector('#dropdown');
+const dropdown = document.querySelector('ul');
+const trigger = document.querySelector('#trigger');
+const body = document.body;
+const backdrop = document.querySelector('#backdrop');
 
-toggle.addEventListener('click', function(){
+
+trigger.addEventListener('click', function(){
     toggle.classList.toggle('active');
     dropdown.classList.toggle('active');
+    body.classList.toggle('lock');
+    backdrop.classList.toggle('active');
 });
-
-
