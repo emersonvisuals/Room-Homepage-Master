@@ -364,6 +364,12 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #carouselExampleControls .nav {
     display: -webkit-box;
@@ -380,13 +386,34 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     z-index: 1;
-    padding: 1em;
+    padding: 2em 1em 1em 1em;
     width: 100%;
-    margin: auto;
-  }
-  #carouselExampleControls .nav .logo {
-    padding: 0;
     margin: 0;
+  }
+  #carouselExampleControls .nav .toggle {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 10%;
+    margin: 0 0 2.25em 0;
+  }
+  #carouselExampleControls .nav .toggle::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    margin: 10px 0 0 0;
+  }
+  #carouselExampleControls .nav .toggle::before {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    margin: -10px 0 0 0;
   }
   #carouselExampleControls .nav ul {
     display: -webkit-box;
@@ -400,10 +427,11 @@ body {
             align-items: center;
     list-style: none;
     margin: 0;
+    padding: 0;
     visibility: hidden;
   }
   #carouselExampleControls .nav li {
-    padding: 0 1em;
+    padding: 0.5em;
   }
   #carouselExampleControls .nav li a {
     color: white;
@@ -412,42 +440,45 @@ body {
     text-align: center;
   }
   #carouselExampleControls .carousel-item {
-    height: 65vh;
+    height: 50vh;
   }
   #carouselExampleControls .heroOne {
-    background-image: url(/images/desktop-image-hero-1.jpg);
+    background-image: url(/images/mobile-image-hero-1.jpg);
     background-size: cover;
-    width: 100%;
-    height: 65vh;
+    background-position: center;
+    width: auto;
+    height: 50vh;
   }
   #carouselExampleControls .heroTwo {
-    background-image: url(/images/desktop-image-hero-2.jpg);
+    background-image: url(/images/mobile-image-hero-2.jpg);
     background-size: cover;
-    width: 100%;
-    height: 65vh;
+    background-position: center;
+    width: auto;
+    height: 50vh;
   }
   #carouselExampleControls .heroThree {
-    background-image: url(/images/desktop-image-hero-3.jpg);
+    background-image: url(/images/mobile-image-hero-3.jpg);
     background-size: cover;
-    width: 100%;
-    height: 65vh;
+    background-position: center;
+    width: auto;
+    height: 50vh;
   }
   #header-details {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background-color: #f7f7f7;
-    position: relative;
-    height: 65vh;
-    padding: 30% 10% 0% 10%;
-    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    background-color: #f7f7f7;
+    position: relative;
+    height: 55vh;
+    padding: 10% 10% 0% 10%;
+    display: flex;
+    align-items: center;
   }
   #header-details h1 {
     font-family: Spartan;
@@ -567,16 +598,15 @@ body {
   }
   #header-details .carousel-arrows {
     position: absolute;
-    top: -90px;
-    left: 0;
-    float: right;
+    top: -80px;
+    left: calc(100% - 160px);
   }
   #header-details .carousel-arrows .left {
     position: absolute;
     background-color: black;
     border: none;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
   }
   #header-details .carousel-arrows .left .carousel-control-prev-icon {
     background-image: url(/images/icon-angle-left.svg);
@@ -585,17 +615,15 @@ body {
     width: 25px;
   }
   #header-details .carousel-arrows .left:hover {
-    background-color: #424242;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
+    background-color: black;
   }
   #header-details .carousel-arrows .right {
     position: absolute;
     background-color: black;
     border: none;
-    width: 90px;
-    height: 90px;
-    margin: 0 0 0 5.6em;
+    width: 80px;
+    height: 80px;
+    margin: 0 0 0 5em;
   }
   #header-details .carousel-arrows .right .carousel-control-next-icon {
     background-image: url(/images/icon-angle-right.svg);
@@ -604,9 +632,7 @@ body {
     width: 25px;
   }
   #header-details .carousel-arrows .right:hover {
-    background-color: #424242;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
+    background-color: black;
   }
   #imageOne {
     content: '';
@@ -620,12 +646,13 @@ body {
     background-image: url(/images/image-about-dark.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     z-index: 1;
     height: 35vh;
   }
   #about {
     content: '';
-    padding: 10%;
+    padding: 15% 10% 15% 10%;
     background-color: white;
     -ms-grid-column: 1;
         grid-column-start: 1;
@@ -667,6 +694,7 @@ body {
             flex-direction: column;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     background-image: url(/images/image-about-light.jpg);
     z-index: 1;
     height: 35vh;
