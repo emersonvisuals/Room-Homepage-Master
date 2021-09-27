@@ -49,8 +49,9 @@ right.addEventListener('click', function() {
     paragraph.textContent = rightItem.text;
     console.log(`number ${number}`);
 
-    header.classList.toggle('active');
-    paragraph.classList.toggle('active');
+  //  header.classList.toggle('active');
+  //  paragraph.classList.toggle('active');
+
 });
 
 
@@ -64,8 +65,8 @@ left.addEventListener('click', function(){
     paragraph.textContent = leftItem.text;
     console.log(`number ${number}`);
 
-    header.classList.toggle('active');
-    paragraph.classList.toggle('active');
+  //  header.classList.toggle('active');
+    // paragraph.classList.toggle('active');
 });
 
 
@@ -87,3 +88,17 @@ trigger.addEventListener('click', function(){
     backdrop.classList.toggle('active');
 
 });
+
+
+// remove function when clicking on backdrop
+
+function myFunction() {
+    backdrop.addEventListener('click', function(){
+        toggle.classList.remove('active');
+        dropdown.classList.remove('active');
+        body.classList.remove('lock');
+        backdrop.classList.remove('active');
+    })
+}
+
+myFunction();

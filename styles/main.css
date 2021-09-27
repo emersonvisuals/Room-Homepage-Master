@@ -61,6 +61,89 @@ body {
   text-decoration: none;
 }
 
+#carouselExampleControls .nav a.home:hover::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 3px;
+  margin: 1.75em 0 0 -2.1em;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-animation: navAnimation 0.5s;
+          animation: navAnimation 0.5s;
+}
+
+#carouselExampleControls .nav a.home:hover::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 3px;
+  margin: 2em 0 0 -2.1em;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-animation: navAnimation 0.5s;
+          animation: navAnimation 0.5s;
+}
+
+#carouselExampleControls .nav a.shop:hover::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 3px;
+  margin: 2em 0 0 -1.8em;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-animation: navAnimation 0.5s;
+          animation: navAnimation 0.5s;
+}
+
+#carouselExampleControls .nav a.about:hover::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 3px;
+  margin: 2em 0 0 -2.2em;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-animation: navAnimation 0.5s;
+          animation: navAnimation 0.5s;
+}
+
+#carouselExampleControls .nav a.contact:hover::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 3px;
+  margin: 2em 0 0 -2.5em;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-animation: navAnimation 0.5s;
+          animation: navAnimation 0.5s;
+}
+
+@-webkit-keyframes navAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes navAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 #carouselExampleControls .carousel-item {
   height: 65vh;
 }
@@ -106,10 +189,6 @@ body {
   font-family: Spartan;
   font-weight: 800;
   margin: -2em 0 0.75em 0;
-  -webkit-animation: changeNormal 1s;
-          animation: changeNormal 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
 }
 
 @-webkit-keyframes changeNormal {
@@ -159,10 +238,6 @@ body {
   color: #a1a1a1;
   font-family: Spartan;
   font-size: 12px;
-  -webkit-animation: changeNormal 1s;
-          animation: changeNormal 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
 }
 
 #header-details p.active {
@@ -200,6 +275,18 @@ body {
           animation-timing-function: ease-in-out;
 }
 
+#header-details button.shop-now:hover {
+  color: #a1a1a1;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+#header-details button.shop-now:hover::after {
+  opacity: 0.35;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
 @-webkit-keyframes shopNow {
   0% {
     -webkit-transform: translateY(0px);
@@ -232,7 +319,7 @@ body {
 
 #header-details .carousel-arrows {
   position: absolute;
-  bottom: 100px;
+  bottom: 90px;
   left: 0;
 }
 
@@ -240,8 +327,8 @@ body {
   position: absolute;
   background-color: black;
   border: none;
-  width: 105px;
-  height: 105px;
+  width: 90px;
+  height: 90px;
 }
 
 #header-details .carousel-arrows .left .carousel-control-prev-icon {
@@ -261,9 +348,9 @@ body {
   position: absolute;
   background-color: black;
   border: none;
-  width: 105px;
-  height: 105px;
-  margin: 0 0 0 6.5em;
+  width: 90px;
+  height: 90px;
+  margin: 0 0 0 5.6em;
 }
 
 #header-details .carousel-arrows .right .carousel-control-next-icon {
@@ -289,6 +376,7 @@ body {
   background-size: cover;
   z-index: 1;
   height: 35vh;
+  padding: 30% 0;
 }
 
 #about {
@@ -337,6 +425,7 @@ body {
   background-image: url(/images/image-about-light.jpg);
   z-index: 1;
   height: 35vh;
+  padding: 30% 0;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -712,27 +801,6 @@ body {
   }
   #header-details .carousel-arrows .right:hover {
     background-color: black;
-  }
-  #header-details #backdrop {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    margin: -30.5em 0 0 0;
-    background-blend-mode: overlay;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: 0.5s all;
-    transition: 0.5s all;
-    visibility: hidden;
-  }
-  #header-details #backdrop.active {
-    opacity: 0.5;
-    visibility: visible;
-    -webkit-transition: 0.5s all;
-    transition: 0.5s all;
-    visibility: visible;
   }
   #imageOne {
     content: '';
