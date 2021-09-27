@@ -189,6 +189,10 @@ body {
   font-family: Spartan;
   font-weight: 800;
   margin: -2em 0 0.75em 0;
+  -webkit-animation: changeNormal 1s;
+          animation: changeNormal 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 @-webkit-keyframes changeNormal {
@@ -238,6 +242,10 @@ body {
   color: #a1a1a1;
   font-family: Spartan;
   font-size: 12px;
+  -webkit-animation: changeNormal 1s;
+          animation: changeNormal 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 #header-details p.active {

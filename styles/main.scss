@@ -156,8 +156,8 @@ body {
         font-family: $fontFamily;
         font-weight: 800;
         margin:-2em 0 0.75em 0;
- //       animation: changeNormal 1s;
- //       animation-timing-function: ease-in-out; 
+        animation: changeNormal 1s;
+        animation-timing-function: ease-in-out; 
     }
 
     @keyframes changeNormal {
@@ -188,8 +188,8 @@ body {
         color:$darkGrey;
         font-family: $fontFamily;
         font-size: 12px;
- //       animation: changeNormal 1s;
-//        animation-timing-function: ease-in-out; 
+          animation: changeNormal 1s;
+           animation-timing-function: ease-in-out; 
     }
 
     p.active {

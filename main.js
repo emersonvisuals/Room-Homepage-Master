@@ -49,8 +49,8 @@ right.addEventListener('click', function() {
     paragraph.textContent = rightItem.text;
     console.log(`number ${number}`);
 
-  //  header.classList.toggle('active');
-  //  paragraph.classList.toggle('active');
+    header.classList.toggle('active');
+    paragraph.classList.toggle('active');
 
 });
 
@@ -65,8 +65,8 @@ left.addEventListener('click', function(){
     paragraph.textContent = leftItem.text;
     console.log(`number ${number}`);
 
-  //  header.classList.toggle('active');
-    // paragraph.classList.toggle('active');
+    header.classList.toggle('active');
+    paragraph.classList.toggle('active');
 });
 
 
